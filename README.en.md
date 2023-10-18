@@ -4,7 +4,6 @@
 {**GSW-FI: A GLM model incorporating shrinkage and double-weighted strategies for identifying cancer driver genes with functional impact**}
 
 ### Instructions to GSW-FI
-Code description
 
 #### Dependencies
 Some R package should be imported to apply GSW-FI, including:
