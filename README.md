@@ -94,7 +94,7 @@ Identify driver genes based on GSW-FI
 ### Developer
 
 - Xiaolu xu
-- lu.xu@mail.dlut.edu.cn 
+- lu.xu@lnnu.edu.cn 
 - School of Computer and Artificial Intelligence
 - Liaoning Normal University
 - Dalian
