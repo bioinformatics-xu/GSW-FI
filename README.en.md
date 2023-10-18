@@ -6,7 +6,7 @@
 ### Instructions to GSW-FI
 
 #### Dependencies
-Some R package should be imported to apply GSW-FI, including:
+Some R packages should be imported to apply GSW-FI, including:
 
 1.  data.table
 2.  plyr
