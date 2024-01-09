@@ -242,7 +242,9 @@ for (g in 1:nrow(gene.feature.score)){
   
 } # of for (gi in 1:ng)
 gene.feature.score$seriRate <- (gene.feature.score$seriMutNum)/(gene.feature.score$totalMutNum)
+# gene.feature.score$seriRate[g] is the proportion of harmful mutations to total mutations of gene g, i.e. w_1^g
 gene.feature.score$seriNumPatient <- exp(gene.feature.score$seriMutNum/length(unique(mutationdata$patient)))
+# gene.feature.score$seriNumPatient[g] is the exponential proportion of harmful mutations (of gene g) to the total number of samples, i.e. w_2^g
 
 gene.feature.score$gene <- rownames(gene.feature.score)
 gene.feature.score <- subset(gene.feature.score, select = c('gene', 'mutationScore', 'seriRate', 'seriNumPatient', 'estimateFI', 'w_nei_score'))
