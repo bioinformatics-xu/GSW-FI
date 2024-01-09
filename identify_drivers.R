@@ -17,6 +17,8 @@ for (g in 1:nrow(gene.feature.score)){
   }else{
     if(gene.feature.score$mutationScore[g] >= 0){
       weighted_FIscore <- gene.feature.score$mutationScore[g]*gene.feature.score$seriRate[g]*gene.feature.score$seriNumPatient[g]
+      # gene.feature.score$seriRate[g] is the proportion of harmful mutations to total mutations of gene g, i.e. w_1^g
+      # gene.feature.score$seriNumPatient[g] is the exponential proportion of harmful mutations (of gene g) to the total number of samples, i.e. w_2^g
       final_score <- lambda*gene.feature.score$estimateFI[g] + (1-lambda)*gene.feature.score$w_nei_score[g]
       pValue_norm <- pnorm(weighted_FIscore,final_score,gene.feature.score$sigma[1])
       gene.feature.score$pValue[g] <- 1 - pValue_norm
